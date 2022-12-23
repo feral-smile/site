@@ -1,0 +1,496 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+ 
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body, h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+} 
+
+.header {
+    background: url(./images/background.png) center/cover no-repeat;
+}
+
+.header__content {
+    padding: 6em 0;
+    width: 60%;
+}
+
+.header__heading {
+    margin-bottom: 0.25em;
+    font-size: 9.375em;
+    color: #fff;
+}
+
+.header__text {
+    font-size: 2em;
+    color: #fff;
+    padding-bottom: 1em;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background-color: aqua;
+    padding: 2em 5em;
+}
+
+.button__sect {
+    border: none;
+    outline: none;
+    padding: 1em 3em;
+    background-color: orange;
+}
+
+.main__section {
+    padding: 3.125em 0;
+}
+
+.section__heading {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.text--center {
+    text-align: center;
+}
+
+.section--turquoise {
+    background-color: turquoise;
+}
+
+.section__row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.row__item {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.item__img-wrapper {
+    width: 70%;
+    margin-bottom: 1em;
+}
+
+.item__desc {
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+
+.header__top [type="checkbox"] {
+    display: none;
+}
+
+.header__top label.toggleMenu {
+    background: #c9c9c9;
+    display: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__top label.toggleMenu {
+    position: relative;
+    top: 15px;
+    left: 12px;
+    font-size: 18px;
+}
+
+:root{
+    --gray: #85888C;
+} /* variables*/
+ 
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+} 
+
+.header__menu{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-weight: 700;
+}
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 20px;
+    margin-left: 10px;
+    
+}
+
+.nav{
+    width: 90%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+ 
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--gray);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 15px 20px;
+}/* Style label tag */
+ 
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+ 
+} 
+
+
+/* Style span tag */
+ 
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+ 
+.side-menu {
+    display: none;
+} 
+
+
+/* Hide checkbox */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Rule */
+
+.rule {
+    background: url(images/bg-grid.png);
+    height: 500px;
+}
+
+.rule-row {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 60px;
+    flex-wrap: wrap;
+}
+
+.rule-card {
+    flex: 1 1 0;
+    min-width: 15px;
+    
+}
+
+.rule-card-img {
+	padding-top: 80px;
+    margin-bottom: 130px;
+    width: 70%;
+    text-align: center;
+    display: block;
+    text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.rule-card-title {
+	padding-top: 140px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    display: block;
+	margin-left: auto;
+    margin-right: auto;
+
+}
+
+.rule-card p {
+    line-height: 2;
+    display: block;
+    text-align: left;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+	background: #333333;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	justify-content: center;
+	align-items: center; 
+	color:  white;
+	font-size: 16px;
+	height: 80px;
+    display: flex; 
+    
+}
+
+.footer ul li {
+    display: inline; 
+	list-style: none;
+}
+
+.footer__menu {
+    display: inline; 
+    justify-content: space-between;
+    margin: 0 80px;
+}
+.footer__nav {
+    display: inline; 
+    justify-content: space-between;
+}
+
+
+#navbar {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+  }
+  #navbar li {
+    display: inline; 
+}
+  #navbar a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    width: 20%;
+  }
+  #navbar a:hover {
+    border-radius: 20px 5px;
+    background-color: #0066FF;
+  }
+
+ /* Медиа-запрос для адаптивности – когда ширина экрана 650px или меньше */
+    
+    @media (min-width: 769px) {     
+        .nav{
+            max-height: none;
+            top: 0;
+            position: relative;
+            float: right;
+            width: fit-content;
+        }
+        .menu li{
+            float: left;
+        }
+        .menu a:hover{
+            background-color: transparent;
+            color: var(--gray);
+ 
+        }
+        .logo {
+            font-size: 20px;
+            margin-left: 10px;
+            padding: 30px;
+        }
+        .hamb{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .header__menu{
+            background-color: var(--black);
+            box-shadow: 1px 1px 5px 0px var(--gray);
+        }
+        :root{
+            --white: #f9f9f9;
+            --black: #36383F;
+            --gray: #85888C;
+        }
+        a:visited {
+            color: #fff;
+        } 
+    
+        .header__content {
+            padding: 3em 0;
+            width: 40%;
+            height: 400px;
+        } 
+    
+        .header__heading {
+            margin-bottom: 0.25em;
+            font-size: 3.375em;
+        }
+    
+        .header__text {
+            font-size: 1.2em;
+            width: 100%;
+        }
+    
+        .button {
+            border: none;
+            outline: none;
+            background-color: aqua;
+            padding: 1.6em 5em;
+        }
+    
+        .section__heading {
+            margin-bottom: 1em;
+        }
+        .logo{
+            color: #fff;
+            height: 35px;
+            padding: 8px;
+            font-size: 16px; 
+        }
+        .section__row {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            
+        }
+        .row__item {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+        .button__sect {
+            padding: 2em 5em;
+        }
+        .rule-row {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .rule-card-img {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .container__footer {
+            display: flex;
+        }
+        .rule-card-title {
+            text-align: center;
+        }
+        .rule-txt {
+            text-align: center;
+        }
+        .rule-card {
+            text-align: center;
+            font-size: 22px;
+        }
+        .rule {
+            height: auto;
+            width: auto; 
+            background-repeat: no-repeat;
+        }
+        .rule-card-img {
+            padding-top: 1px;
+            margin-bottom: 80px;
+            width: 70%;
+        }
+        .rule-card-title {
+            padding-top: 52px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .header__content {
+            padding: 3em 0;
+            width: 50%;
+        }
+        .header__heading {
+            margin-bottom: 0.25em;
+            font-size: 3em;
+        }
+    
+        .header__text {
+            font-size: 1.4em;
+            width: 100%;
+        }
+        .text--center {
+            width: 100%;
+        }
+        .section__row {
+            display: flex;
+            justify-content: space-around;
+        }
+        .logo {
+            padding: 4px; 
+        }
+}
